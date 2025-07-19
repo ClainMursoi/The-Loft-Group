@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Loft Group - Premier IT Services & Solutions | Nairobi, Kenya</title>
+    <meta name="description" content="The Loft Group provides quality IT services including networking, cybersecurity, infrastructure solutions, and IT consulting in Nairobi, Kenya. Established 2018.">
+    <meta name="keywords" content="IT services, networking, cybersecurity, infrastructure, IT consulting, Nairobi, Kenya, The Loft Group">
+    <meta name="author" content="The Loft Group">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.theloftgroup.co.ke">
+    <meta property="og:title" content="The Loft Group - Premier IT Services & Solutions">
+    <meta property="og:description" content="Quality-guaranteed IT services provider specializing in networking, cybersecurity, and infrastructure solutions in Nairobi, Kenya.">
+    <meta property="og:image" content="https://www.theloftgroup.co.ke/images/tlg-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.theloftgroup.co.ke">
+    <meta property="twitter:title" content="The Loft Group - Premier IT Services & Solutions">
+    <meta property="twitter:description" content="Quality-guaranteed IT services provider specializing in networking, cybersecurity, and infrastructure solutions in Nairobi, Kenya.">
+    <meta property="twitter:image" content="https://www.theloftgroup.co.ke/images/tlg-logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="tlg-logo.png">
+    <link rel="apple-touch-icon" href="tlg-logo.png">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "The Loft Group",
+        "url": "https://www.theloftgroup.co.ke",
+        "logo": "https://www.theloftgroup.co.ke/tlg images/tlg-logo.jpeg",
+        "description": "Quality-guaranteed IT services provider specializing in networking, cybersecurity, and infrastructure solutions.",
+        "foundingDate": "2018",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Nairobi",
+            "@country": "Kenya"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+254-754-402482",
+            "email": "info@theloftgroup.co.ke",
+            "contactType": "Customer Support"
+        },
+        "sameAs": [
+            "https://www.theloftgroup.co.ke"
+        ]
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #007bff;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #007bff;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(0, 123, 255, 0.9), rgba(0, 86, 179, 0.9)),
+                        url('hero-bg.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(40, 167, 69, 0.4);
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #007bff;
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about {
+            background: #f8f9fa;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .about-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .about-card h3 {
+            color: #007bff;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .value-item h4 {
+            color: #007bff;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .service-header {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .service-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-content {
+            padding: 2rem;
+            flex: 1;
+        }
+
+        .service-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .service-list li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .service-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        /* Products Section */
+        .products {
+            background: #f8f9fa;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 2rem;
+        }
+
+        /* Why TLG Section */
+        .why-tlg {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .why-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .why-item h4 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #f8f9fa;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: #007bff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 1rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                flex-direction: column;
+                background: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 2rem 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 1rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .products-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-image {
+                height: 180px;
+            }
+
+            .service-header {
+                padding: 1.2rem 1.5rem;
+            }
+
+            .service-content {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .service-image {
+                height: 150px;
+            }
+
+            .service-header {
+                padding: 1rem;
+            }
+
+            .service-header h3 {
+                font-size: 1.3rem;
+            }
+
+            .service-content {
+                padding: 1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="tlg images/tlg-logo.jpeg" alt="The Loft Group Logo" class="logo">
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>The Loft Group</h1>
+            <p>Premier IT Services & Infrastructure Solutions in Kenya</p>
+            <p>Quality-guaranteed service provider since 2018, specializing in Networking Services, Cybersecurity, Infrastructure Solutions, and IT Consulting</p>
+            <a href="#contact" class="cta-button">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About The Loft Group</h2>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Our Story</h3>
+                    <p>Established in 2018, The Loft Group is a quality-guaranteed service provider of Networking Services, AMC Services, Infrastructure Solutions and Cyber Security. As a mindful IT Company, we have adhered to different government norms and industry-set rules to execute our wide-ranging administrations.</p>
+                    <p>We leverage enterprise services and solutions across industries and horizontals to offer cutting-edge business and technology-based professional IT infrastructure services.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3>Our Vision</h3>
+                    <p>To become a leader in providing best ICT innovative products and services in various industries.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3>Our Mission</h3>
+                    <p>To exceed the anticipation of our clients in service provision and product innovation so that customer satisfaction and retention is achieved. To overwhelmingly and optimistically influence the shape of Kenya's ICT services and beyond.</p>
+                </div>
+            </div>
+
+            <div class="about-card" style="margin-top: 2rem;">
+                <h3>Our Core Values</h3>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <h4>Integrity</h4>
+                        <p>We ensure honest deals with our clients</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>Professional</h4>
+                        <p>We ensure innovation in product and service provision so that our clients go with latest and up to date technology</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>Effectiveness</h4>
+                        <p>We ensure our services are valuable, effective and efficient</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>Timely</h4>
+                        <p>We ensure we meet deadlines in discharging our assigned duties so that our clients get our service timely without compromising on quality</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            
+            <div class="services-grid">
+                <!-- IT Consultancy -->
+                <div class="service-card">
+                    <img src="tlg images/it-consultancy-service.jpeg" alt="IT Consultancy Services" class="service-image">
+                    <div class="service-header">
+                        <h3>IT Consultancy</h3>
+                        <p>High-end technology implementation and consulting services</p>
+                    </div>
+                    <div class="service-content">
+                        <p>We consult for high-end technology implementation at clients' site or implementation of new technology according to the clients' requirement or upgrading, enhancing the existing facilities with new technology integrated with the existing one.</p>
+                        <ul class="service-list">
+                            <li>Vendor Independent reviews and Recommendations</li>
+                            <li>Client-centric IT Consulting</li>
+                            <li>Information Security Experts</li>
+                            <li>Change, Transform, Innovate, Scale</li>
+                        </ul>
+                        <p>As an advisory firm, TLG enables organizations to reimagine their future and create sustainable and lasting business value.</p>
+                    </div>
+                </div>
+
+                <!-- IT Infrastructure Outsource -->
+                <div class="service-card">
+                    <img src="tlg images/infrastructure-outsourcing.jpeg" alt="IT Infrastructure Outsourcing" class="service-image">
+                    <div class="service-header">
+                        <h3>IT Infrastructure Outsource</h3>
+                        <p>Complete IT operations and infrastructure management</p>
+                    </div>
+                    <div class="service-content">
+                        <p>Outsourcing of daily IT operations and management of a company's Infrastructure is the hallmark of the TLG outsourcing program. TLG dedicates a resource, either a System Administrator or IT Manager, to manage IT Infrastructure of the client/company on a retainer model.</p>
+                        <ul class="service-list">
+                            <li>IT Infrastructure Outsource</li>
+                            <li>IT Infrastructure Implementation</li>
+                            <li>Systems & Network Integration</li>
+                            <li>Onsite Support</li>
+                            <li>Design & Implementation of customized solutions</li>
+                            <li>Strategic IT consulting</li>
+                            <li>Infrastructure Outsourcing Services</li>
+                            <li>Project Management</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Network Infrastructure Services -->
+                <div class="service-card">
+                    <img src="tlg images/network-solutions-tech.jpeg" alt="Network Infrastructure Services" class="service-image">
+                    <div class="service-header">
+                        <h3>Network Infrastructure Services</h3>
+                        <p>Complete network solutions and management</p>
+                    </div>
+                    <div class="service-content">
+                        <p>For any business, the network is the backbone. TLG IT managed network services ensure the smooth running of your core business infrastructure. We manage everything from full IT management and design.</p>
+                        <ul class="service-list">
+                            <li>Routers, Switches, Firewalls</li>
+                            <li>Wireless Devices</li>
+                            <li>Network Setup and Configuration Services</li>
+                            <li>Security Setup and Configuration Services</li>
+                            <li>LAN, WAN, and wireless services</li>
+                            <li>High-speed backbone designs</li>
+                            <li>Load balancing, switch architecture</li>
+                            <li>MPLS design, deployment & support</li>
+                            <li>Complete infrastructure consulting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Network Structural Cabling -->
+                <div class="service-card">
+                    <img src="tlg images/network-stracture.jpeg" alt="Network Structural Cabling" class="service-image">
+                    <div class="service-header">
+                        <h3>Network Structural Cabling</h3>
+                        <p>Professional cabling and infrastructure setup</p>
+                    </div>
+                    <div class="service-content">
+                        <ul class="service-list">
+                            <li>Installation and Maintenance of voice</li>
+                            <li>Data com wiring structure</li>
+                            <li>CAT5, CAT5E, CAT6, CAT6A</li>
+                            <li>Fibre Optics, telephone communication</li>
+                            <li>Compliance testing</li>
+                            <li>Executed by experts</li>
+                            <li>Quick execution</li>
+                            <li>Infrastructure documentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Server Management & Support -->
+                <div class="service-card">
+                    <img src="tlg images/server-management-room.jpeg" alt="Server Management and Support" class="service-image">
+                    <div class="service-header">
+                        <h3>Server Management & Support</h3>
+                        <p>Comprehensive server solutions and support</p>
+                    </div>
+                    <div class="service-content">
+                        <p>TLG IT Server Management Services address the requirement of enterprise right from designing, delivering, deploying & migrating. Our server management services ensure better uptime, utilization rate & increased performance.</p>
+                        <ul class="service-list">
+                            <li>Mail and Messaging Management</li>
+                            <li>Application software & OS Management</li>
+                            <li>Backup Management & Database Management</li>
+                            <li>Security & Antivirus Management</li>
+                            <li>Help Desk and Call Desk Management</li>
+                            <li>Desktop and Client-Side Support</li>
+                            <li>Remote Support & Troubleshooting</li>
+                            <li>Performance Reporting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Application Development Services -->
+                <div class="service-card">
+                    <img src="tlg images/mobile-app-development.jpeg" alt="Application Development Services" class="service-image">
+                    <div class="service-header">
+                        <h3>Application Development Services</h3>
+                        <p>Custom software and mobile application development</p>
+                    </div>
+                    <div class="service-content">
+                        <p>The development team of TLG is equipped with proper human resources specialized in different system development tasks.</p>
+                        <ul class="service-list">
+                            <li>System Analysis & Design</li>
+                            <li>Custom CRM Solutions</li>
+                            <li>Microsoft HMIS Development</li>
+                            <li>Mobile Applications Systems</li>
+                            <li>Cross-platform Mobile Development</li>
+                            <li>Network-connected Applications</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section products">
+        <div class="container">
+            <h2 class="section-title">Products & Solutions</h2>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">🖥️</div>
+                    <h3>IT Infrastructure Solutions</h3>
+                    <p>Complete IT infrastructure consulting and outsource services tailored to your business needs.</p>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">⚙️</div>
+                    <h3>Managed IT Services</h3>
+                    <p>Comprehensive managed services to keep your IT infrastructure running smoothly 24/7.</p>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🛡️</div>
+                    <h3>IT Security Systems</h3>
+                    <p>Advanced cybersecurity solutions, IT audit services, and software management.</p>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">💻</div>
+                    <h3>Computer Hardware</h3>
+                    <p>Providing Desktop computers, Servers, Laptops, and CCTV Cameras for all your business needs.</p>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🔧</div>
+                    <h3>Complete IT Solutions</h3>
+                    <p>End-to-end IT solutions and support services from consultation to implementation.</p>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">📱</div>
+                    <h3>Mobile Applications</h3>
+                    <p>Custom mobile application development for iOS and Android platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why TLG Section -->
+    <section class="section why-tlg">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Why Choose The Loft Group?</h2>
+            
+            <div class="why-grid">
+                <div class="why-item">
+                    <h4>Quality Guaranteed</h4>
+                    <p>TLG IT Services is a quality-guaranteed service provider of AMC Services and Infrastructure Solutions across the Country.</p>
+                </div>
+
+                <div class="why-item">
+                    <h4>Independent Business Model</h4>
+                    <p>Unique business model with NO association with any products company, partnering only with clients to understand and enhance business value through technology.</p>
+                </div>
+
+                <div class="why-item">
+                    <h4>Rich Experience</h4>
+                    <p>Rich experience in handling similar projects to various clients with complete project management experience.</p>
+                </div>
+
+                <div class="why-item">
+                    <h4>Comprehensive Expertise</h4>
+                    <p>Expertise in giving consultancy from IT infrastructure to ERP (anything relating to technology utilizations).</p>
+                </div>
+
+                <div class="why-item">
+                    <h4>Strong Vendor Relations</h4>
+                    <p>As a representative for various organizations, gained tremendous power to negotiate commercials with any principal companies.</p>
+                </div>
+
+                <div class="why-item">
+                    <h4>Ethical Approach</h4>
+                    <p>Highly ethical and always relates payment linked with deliverables.</p>
+                </div>
+
+                <div class="why-item">
+                    <h4>Reduced Dependencies</h4>
+                    <p>Always ensures the client will have very less people dependency in getting management reports.</p>
+                </div>
+
+                <div class="why-item">
+                    <h4>24/7 Support</h4>
+                    <p>24/7 online support for any IT issues, with remote support from Senior Technical team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Ready to transform your IT infrastructure? Contact us today for a consultation.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@theloftgroup.co.ke</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+254 754 402482</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div>
+                            <h4>Website</h4>
+                            <p>www.theloftgroup.co.ke</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Nairobi, Kenya</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="IT Consultation Request">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your IT needs..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 The Loft Group. All rights reserved. | Premier IT Services in Nairobi, Kenya</p>
+            <p>Established 2018 | Email: info@theloftgroup.co.ke | Tel: +254 754 402482</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Contact Form Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value || 'IT Services Inquiry';
+            const message = document.getElementById('message').value;
+            
+            // Validate required fields
+            if (!name || !email || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Create mailto link with form data
+            const mailtoSubject = encodeURIComponent(`${subject} - From ${name}`);
+            const mailtoBody = encodeURIComponent(
+                `Name: ${name}\n` +
+                `Email: ${email}\n` +
+                `Subject: ${subject}\n\n` +
+                `Message:\n${message}\n\n` +
+                `---\n` +
+                `This message was sent from The Loft Group website contact form.`
+            );
+            
+            const mailtoLink = `mailto:info@theloftgroup.co.ke?subject=${mailtoSubject}&body=${mailtoBody}`;
+            
+            // Open default email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            alert('Thank you for your message! Your default email client should now open with your message pre-filled. Please send the email to complete your inquiry.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .product-card, .about-card, .why-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Typing effect for hero subtitle (optional enhancement)
+        const heroSubtitle = document.querySelector('.hero p:first-of-type');
+        if (heroSubtitle) {
+            const text = heroSubtitle.textContent;
+            heroSubtitle.textContent = '';
+            let i = 0;
+            const typeWriter = () => {
+                if (i < text.length) {
+                    heroSubtitle.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            };
+            setTimeout(typeWriter, 1000);
+        }
+
+        // Add hover effects for service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(-5px) scale(1)';
+            });
+        });
+
+        // Add click tracking for analytics (placeholder)
+        document.querySelectorAll('.cta-button, .submit-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Add your analytics tracking code here
+                console.log('Button clicked:', this.textContent);
+            });
+        });
+
+        // Add search functionality (basic)
+        const searchServices = (query) => {
+            const services = document.querySelectorAll('.service-card');
+            query = query.toLowerCase();
+            
+            services.forEach(service => {
+                const text = service.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    service.style.display = 'block';
+                } else {
+                    service.style.display = 'none';
+                }
+            });
+        };
+
+        // Add keyboard navigation support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Performance optimization: Lazy loading for images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[data-src]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+            document.body.appendChild(script);
+        }
+    </script>
+</body>
+</html>
+            
